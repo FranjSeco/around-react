@@ -2,8 +2,8 @@ import React from 'react';
 
 import Header from '../Header/Header.js'
 import Main from '../Main/Main.js'
-import PopUpWithForm from '../PopUp/PopUpWithForm.js'
-import ImageOverlay from '../PopUp/ImageOverlay.js'
+import PopupWithForm from '../PopUp/PopupWithForm.js'
+import ImagePopup from '../PopUp/ImagePopup.js'
 import Footer from '../Footer/Footer.js'
 
 import './App.css';
@@ -52,7 +52,7 @@ function App() {
       />
       
 
-      <PopUpWithForm
+      <PopupWithForm
         name={'profile'}
         title={'Edit Profile'}
         btn={'Save'}
@@ -88,9 +88,9 @@ function App() {
           className="form-input-error"
         />
 
-      </PopUpWithForm>
+      </PopupWithForm>
 
-      <PopUpWithForm
+      <PopupWithForm
         name={'avatar'}
         title={'Edit Avatar'}
         btn={'Save'}
@@ -98,9 +98,9 @@ function App() {
         onClose={handleClose}>
         <input id="avatar-input" className="avatar-form__input avatar-form__input_about form-input" placeholder="Avatar URL" type="url" name="link" required />
         <span id="avatar-input-error" className="form-input-error" />
-      </PopUpWithForm>
+      </PopupWithForm>
 
-      <PopUpWithForm
+      <PopupWithForm
         name={'image'}
         title={'New Place'}
         btn={'Save'}
@@ -110,17 +110,17 @@ function App() {
         <span id="image-input-error" className="form-input-error" />
         <input id="url-input" className="image-form__input image-form__input_about form-input" placeholder="Image URL" type="url" name="link" required />
         <span id="url-input-error" className="form-input-error" />
-      </PopUpWithForm>
+      </PopupWithForm>
 
-      <PopUpWithForm
+      <PopupWithForm
         name={'delete'}
         title={'Are you sure?'}
         btn={'Yes'}
         onClose={handleClose}>
 
-      </PopUpWithForm>
+      </PopupWithForm>
 
-      <ImageOverlay isOpen={isImageOpen} card={selectedCard}  onClose={handleClose}></ImageOverlay>
+      <ImagePopup isOpen={isImageOpen} card={selectedCard}  onClose={handleClose}></ImagePopup>
 
       <Footer />
     </div>

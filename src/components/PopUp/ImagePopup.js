@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ImageOverlay(props) {
+function ImagePopup(props) {
     return (
         <div className={`overlay ${(props.isOpen) ? 'overlay_popup' : ''}`}>
             <div className="image-popup">
@@ -12,4 +12,4 @@ function ImageOverlay(props) {
     )
 }
 
-export default ImageOverlay;
+export default ImagePopup;

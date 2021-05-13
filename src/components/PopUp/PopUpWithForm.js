@@ -1,6 +1,6 @@
 import React from 'react';
 
-function PopUpWithForm(props) {
+function PopupWithForm(props) {
     return (
         <div className={`overlay ${(props.isOpen) ? 'overlay_popup' : ''}`} >
             <div className={`${props.name}-form`}>
@@ -18,4 +18,4 @@ function PopUpWithForm(props) {
 }
 
 
-export default PopUpWithForm;
+export default PopupWithForm;
