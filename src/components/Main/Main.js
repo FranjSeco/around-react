@@ -1,5 +1,5 @@
 import React from 'react';
-import api from '../Utils/Api.js'
+import api from '../../utils/api.js'
 import Card from '../Card/Card.js'
 
 
@@ -53,13 +53,13 @@ function Main(props) {
                 <button onClick={props.onAddPlace} className="profile__add-btn" type="button">
                 </button>
             </section>
-            <div class="elements">
+            <div className="elements">
                 {
                     cards.map(
-                        (card, id) => [<Card
+                        (card, id) => (<Card
                         key={id}
                         card={card}
-                        onClick={() => props.onCardClick(card)} />])
+                        onClick={() => props.onCardClick(card)} />))
                 }
             </div>
 
