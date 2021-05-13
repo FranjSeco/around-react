@@ -6,16 +6,19 @@ function PopupWithForm(props) {
             <div className={`${props.name}-form`}>
                 <button className="close-icon" onClick={props.onClose} type="button"> </button>
                 <form className={`${props.name}-form__form form`} name="Form" noValidate>
-                    <h2 className={`${props.name}-form__title`}>{props.title}</h2>
-
-                    {props.children}
-
-                    <button className={`${props.name}-form__btn form-submit`} type="submit">{props.btn}</button>
+                    <h2 className={`${props.name}-form__title`}>
+                        {props.title}
+                    </h2>
+                    {
+                        props.children
+                    }
+                    <button className={`${props.name}-form__btn form-submit`} type="submit">
+                        {props.btn}
+                    </button>
                 </form>
             </div>
         </div>
     )
 }
-
 
 export default PopupWithForm;
