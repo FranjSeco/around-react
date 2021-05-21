@@ -33,7 +33,7 @@ function Main(props) {
                             card={card}
                             onClick={props.onCardClick}
                             onCardLike={props.onCardLike}
-                            onCardDelete={props.onCardDelete}
+                            onDeleteCardPopup={props.onDeleteCardPopup}
                         />))
                 }
             </div>

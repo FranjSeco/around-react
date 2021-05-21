@@ -2,7 +2,6 @@ import React from 'react';
 import {CurrentUserContext} from '../../contexts/CurrentUserContext.js'
 
 function Card(props) {
-
   function handleClick() {
     props.onClick(props.card);
   }
@@ -12,7 +11,7 @@ function Card(props) {
   }
 
   function handleDeleteClick() {
-    props.onCardDelete(props.card);
+    props.onDeleteCardPopup(props.card._id);
   }
 
   const userInfo = React.useContext(CurrentUserContext); 
