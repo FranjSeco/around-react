@@ -9,8 +9,6 @@ import DeleteCardPopup from '../DeleteCardPopup/DeleteCardPopup.js'
 import ImagePopup from '../PopUp/ImagePopup.js'
 import Footer from '../Footer/Footer.js'
 
-
-
 import api from '../../utils/api.js';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext.js';
 
@@ -127,6 +125,7 @@ function App() {
   function handleAddPlaceSubmit(newPlace) {
     api.addCard({ ...newPlace })
       .then((data) => {
+
         setCards([data, ...cards]);
       })
       .catch((err) => {
