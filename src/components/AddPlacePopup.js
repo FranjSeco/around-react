@@ -3,24 +3,24 @@ import PopupWithForm from './PopupWithForm.js'
 
 
 function AddPlacePopup(props) {
-    const [url, setUrl] = React.useState('');
-    const [place, setPlace] = React.useState('');
+    // const [url, setUrl] = React.useState('');
+    // const [place, setPlace] = React.useState('');
     const placeInputRef = React.useRef('');
     const urlInputRef = React.useRef('');
 
-    function handlePlaceInput(e) {
-        setPlace(e.target.value);
-    }
-    function handleUrlInput(e) {
-        setUrl(e.target.value);
-    }
+    // function handlePlaceInput() {
+    //     setPlace(e.target.value);
+    // }
+    // function handleUrlInput(e) {
+    //     setUrl(e.target.value);
+    // }
 
     function handleSubmit(e) {
         e.preventDefault();
 
         props.onAddPlace({
-            name: place, 
-            link: url
+            name: placeInputRef.current.value, 
+            link: urlInputRef.current.value
         }) 
 
         placeInputRef.current.value = '';
@@ -46,7 +46,7 @@ function AddPlacePopup(props) {
             minLength={1} 
             maxLength={30} 
             required
-            onChange={handlePlaceInput}
+            //onChange={handlePlaceInput}
             />
             <span 
             id="image-input-error" 
@@ -60,7 +60,8 @@ function AddPlacePopup(props) {
             type="url" 
             name="link" 
             required
-            onChange={handleUrlInput}
+            //onChange={handleUrlInput}
+            
             />
             <span 
             id="url-input-error" 

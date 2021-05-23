@@ -2,7 +2,8 @@ import React from 'react';
 
 function PopupWithForm(props) {
     return (
-        <div className={`overlay ${(props.isOpen) ? 'overlay_popup' : ''}`} >
+        // <div className={`overlay ${(props.isOpen) ? 'overlay_popup' : ''}`} >
+        <div className={`overlay ${(props.isOpen) && 'overlay_popup'}`} >
             <div className={`${props.name}-form`}>
                 <button className="close-icon" onClick={props.onClose} type="button"> </button>
                 <form className={`${props.name}-form__form form`} onSubmit={props.onSubmit} name="Form" noValidate>

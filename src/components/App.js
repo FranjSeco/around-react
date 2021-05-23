@@ -12,7 +12,7 @@ import Footer from './Footer.js'
 import api from '../utils/api.js';
 import { CurrentUserContext } from '../contexts/CurrentUserContext.js';
 
-import '../components/App/App.css';
+import '../App.css';
 import '../index.css';
 
 
@@ -25,7 +25,7 @@ function App() {
   const [isImageOpen, setIsImageOpen] = React.useState(false);
   const [selectedCard, setSelectedCard] = React.useState({});
 
-  const [cardToBeDeleted, setCardToBeDeleted] = React.useState();
+  const [cardToBeDeleted, setCardToBeDeleted] = React.useState('');
 
   const [cards, setCards] = React.useState([]);
 
@@ -33,7 +33,7 @@ function App() {
 
 
   React.useEffect(() => {
-    api.apiUserInfo()
+    api.getUserInfo()
       .then(res => {
         setCurrentUser(res);
       })

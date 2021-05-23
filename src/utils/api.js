@@ -21,7 +21,7 @@ class Api {
 
 
   // GET https://around.nomoreparties.co/v1/groupId/users/me
-  apiUserInfo() {
+  getUserInfo() {
     return fetch(this._baseUrl + "/users/me", {
       headers: this._headers
     })
@@ -30,7 +30,7 @@ class Api {
 
 
   getServerInfo() {
-    return Promise.all([this.getInitialCards(), this.apiUserInfo()])
+    return Promise.all([this.getInitialCards(), this.getUserInfo()])
   }
 
   // POST https://around.nomoreparties.co/v1/groupId/cards
