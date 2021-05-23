@@ -27,8 +27,6 @@ function EditProfilePopup(props) {
             name: name,
             about: description,
         })
-        nameInputRef.current.value = '';
-        aboutInputRef.current.value = '';
     }
 
     React.useEffect(() => {
