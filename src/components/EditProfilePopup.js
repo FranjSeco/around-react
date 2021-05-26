@@ -7,8 +7,8 @@ function EditProfilePopup(props) {
     const [description, setDescription] = React.useState('');
     const currentUser = React.useContext(CurrentUserContext);
 
-    const nameInputRef = React.useRef('');
-    const aboutInputRef = React.useRef('');
+    // const nameInputRef = React.useRef('');
+    // const aboutInputRef = React.useRef('');
 
     function handleNameChange(e) {
         setName(e.target.value);
@@ -43,7 +43,7 @@ function EditProfilePopup(props) {
             isOpen={props.isOpen}
             onClose={props.onClose}>
             <input
-                ref={nameInputRef}
+                // ref={nameInputRef}
                 id="name-input"
                 className="form-input profile-form__input profile-form__input_name"
                 type="text"
@@ -59,7 +59,7 @@ function EditProfilePopup(props) {
                 id="name-input-error"
                 className="form-input-error" />
             <input
-            ref={aboutInputRef}
+            // ref={aboutInputRef}
                 id="about-input"
                 className="profile-form__input profile-form__input_about form-input"
                 type="text"
