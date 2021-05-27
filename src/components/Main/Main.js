@@ -1,6 +1,6 @@
 import React from 'react';
-import Card from '../components/Card.js'
-import { CurrentUserContext } from '../contexts/CurrentUserContext.js'
+import Card from '../Card/Card.js'
+import { CurrentUserContext } from '../../contexts/CurrentUserContext.js'
 
 
 function Main(props) {
